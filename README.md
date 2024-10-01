@@ -1,36 +1,35 @@
 # Apache Airflow
 
-O Apache Airflow é uma plataforma open-source escrita em Python projetada para criar, agendar e monitorar fluxos de trabalho (workflow) de data pipelines. Originalmente desenvolvido pelo Airbnb, o projeto foi posteriormente contribuído para a Apache Software Foundation, tornando-se um projeto de alto nível. O Airflow é amplamente utilizado para automatizar tarefas complexas de processamento de dados, facilitando a orquestração e o agendamento de fluxos de trabalho.
+Apache Airflow is an open-source platform written in Python designed to create, schedule, and monitor data pipeline workflows. Originally developed by Airbnb, the project was later contributed to the Apache Software Foundation, becoming a high-level project. Airflow is widely used to automate complex data processing tasks, facilitating the orchestration and scheduling of workflows.
 
-## Arquitetura
+## Architecture
 
-O Apache Airflow possui uma arquitetura modular composta por diversos componentes interconectados. Os principais componentes incluem:
+Apache Airflow has a modular architecture composed of various interconnected components. The main components include:
 
-1. **Scheduler:** Responsável por agendar e executar tarefas de acordo com as dependências definidas entre elas.
-2. **Executor:** Gerencia a execução real das tarefas, podendo ser local ou distribuído em um cluster.
-3. **Metadatabase:** Armazena metadados sobre os fluxos de trabalho, tarefas, execuções passadas e estados.
-4. **Web Server:** Fornece uma interface de usuário web para monitoramento, gerenciamento e visualização de fluxos de trabalho.
-5. **CLI (Command Line Interface):** Permite interagir com o Airflow através da linha de comando.
-6. **Executor de Tarefas:** Responsável por executar tarefas individuais dentro dos operadores definidos nos fluxos de trabalho.
+1. **Scheduler:** Responsible for scheduling and executing tasks according to the dependencies defined between them.
+2. **Executor:** Manages the actual execution of tasks, which can be local or distributed across a cluster.
+3. **Metadatabase:** Stores metadata about workflows, tasks, past executions, and states.
+4. **Web Server:** Provides a web user interface for monitoring, managing, and visualizing workflows.
+5. **CLI (Command Line Interface):** Allows interaction with Airflow through the command line.
+6. **Task Executor:** Responsible for executing individual tasks within the operators defined in the workflows.
 
 ## DAGs (Directed Acyclic Graphs)
 
-No Apache Airflow, os fluxos de trabalho são representados como DAGs, que são grafos direcionados acíclicos. Cada DAG consiste em uma coleção de tarefas e suas dependências. As tarefas são os elementos individuais de trabalho, enquanto as dependências definem a ordem de execução das tarefas.
+In Apache Airflow, workflows are represented as DAGs, which are directed acyclic graphs. Each DAG consists of a collection of tasks and their dependencies. Tasks are the individual work elements, while dependencies define the order of task execution.
 
-## Operadores
+## Operators
 
-Operadores são unidades de trabalho em um DAG. Cada operador executa uma determinada ação, como executar uma consulta SQL, transferir arquivos, enviar e-mails, entre outras. O Airflow fornece uma variedade de operadores prontos para uso, e os usuários podem estender esses operadores ou criar novos para atender às suas necessidades específicas.
+Operators are units of work in a DAG. Each operator performs a specific action, such as executing an SQL query, transferring files, sending emails, among others. Airflow provides a variety of ready-to-use operators, and users can extend these operators or create new ones to meet their specific needs.
 
 ## Hooks
 
-Hooks são interfaces para sistemas externos, como bancos de dados e APIs de serviços de nuvem. Eles permitem que os operadores do Airflow se comuniquem com esses sistemas externos de forma transparente, facilitando a integração de diferentes fontes de dados e serviços.
+Hooks are interfaces for external systems, such as databases and cloud service APIs. They allow Airflow operators to communicate with these external systems transparently, facilitating the integration of different data sources and services.
 
-## Curiosidades e Recursos Adicionais
+## Fun Facts and Additional Resources
 
-1. **Integração com Ferramentas Populares:** O Airflow se integra facilmente com várias ferramentas populares de Big Data, como Apache Hadoop, Apache Spark, Apache Hive, entre outras.
-2. **Escalabilidade Horizontal:** O Airflow é altamente escalável e pode ser distribuído em vários nós de execução, permitindo lidar com cargas de trabalho de processamento de dados em larga escala.
-3. **Extensibilidade:** O Apache Airflow é altamente extensível, permitindo que os usuários criem seus próprios operadores, hooks e plugins para estender sua funcionalidade.
-4. **Monitoramento Avançado:** O Airflow fornece recursos avançados de monitoramento e registro de execução, permitindo que os usuários acompanhem o desempenho e o status de seus fluxos de trabalho em tempo real.
+1. **Integration with Popular Tools:** Airflow easily integrates with several popular Big Data tools, such as Apache Hadoop, Apache Spark, Apache Hive, among others.
+2. **Horizontal Scalability:** Airflow is highly scalable and can be distributed across multiple execution nodes, allowing it to handle large-scale data processing workloads.
+3. **Extensibility:** Apache Airflow is highly extensible, enabling users to create their own operators, hooks, and plugins to extend its functionality.
+4. **Advanced Monitoring:** Airflow provides advanced monitoring and execution logging features, allowing users to track the performance and status of their workflows in real-time.
 
-Para mais informações e documentação detalhada, visite a [documentação oficial do Apache Airflow](https://airflow.apache.org/docs/apache-airflow/latest/index.html).
-
+For more information and detailed documentation, visit the [official Apache Airflow documentation](https://airflow.apache.org/docs/apache-airflow/latest/index.html).
